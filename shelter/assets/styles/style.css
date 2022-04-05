@@ -1,3 +1,62 @@
 body{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.flex--js-space-between{
+    justify-content: space-between;
+}
 
+
+.start-screen{
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.header{
+    padding: 60px 0 0;
+}
+.logo__title{
+    font-size: 32px;
+    line-height: 110%;
+    color: #F1CDB3;
+    margin: 0;
+    letter-spacing: 0.06em;
+}
+.logo__subtitle{
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.menu__items{
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+}
+.menu__item{
+    margin-left: 36px;
+}
+.menu__link{
+    color: #CDCDCD;
 }
