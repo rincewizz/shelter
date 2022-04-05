@@ -130,3 +130,109 @@ h1,h2,h3,h4,h5,h6{
     color: #4C4C4C;
     margin: 24px 0px;
 }
+
+.our-friends{
+    background: #F6F6F6;
+    padding: 72px 0 100px;
+}
+
+.our-friends__title{
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0 auto;
+    text-align: center;
+}
+.our-friends__carousel{
+    margin-top: 58px;
+    position: relative;
+}
+
+.carousel__items{
+    display: flex;
+    align-items: stretch;
+    width: 1080px;
+    margin: 0 auto;
+}
+.carousel__item{
+    flex: 0 0 33.333%;
+}
+.carousel__arrow{
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+
+}
+.carousel__arrow img{
+    width: 14px;
+    height: auto;
+}
+    
+.carousel__arrow--left{
+    left:0;
+}
+.carousel__arrow--right{
+    right: 0;
+}
+.carousel__arrow--right img{
+    transform: rotate(180deg);
+}
+
+.pet-card{
+    background: #FAFAFA;
+    border-radius: 9px;
+    width: 270px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.pet-card__img{
+    text-align: center;
+}
+.pet-card__img img{
+    display: block;
+}
+.pet-card__name{
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-top: 30px;
+}
+.pet-card__more{
+    font-family: 'Georgia';
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    display: block;
+    padding: 13px 42px;
+    margin: 31px auto 0;
+    background: none;
+}
+
+.our-friends__more-pets{
+    font-family: 'Georgia';
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background: #F1CDB3;
+    border-radius: 100px;
+    border: none;
+    display: block;
+    margin: 60px auto 0;
+    padding: 15px 45px;
+}
