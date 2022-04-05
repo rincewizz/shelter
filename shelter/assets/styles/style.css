@@ -236,3 +236,39 @@ h1,h2,h3,h4,h5,h6{
     margin: 60px auto 0;
     padding: 15px 45px;
 }
+
+.help{
+    padding: 81px 0 100px;
+}
+.help__title{
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0 auto;
+    text-align: center;
+}
+.help__list{
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3px;
+}
+.help__item{
+    padding: 54px 5% 0;
+}
+.help__item-ico{
+    text-align: center;
+}
+.help__item-ico img{
+    display: block;
+    margin: 0 auto;
+}
+.help__item-category{
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%; 
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-top: 30px;
+}
