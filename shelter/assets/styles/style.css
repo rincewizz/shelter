@@ -60,3 +60,45 @@ h1,h2,h3,h4,h5,h6{
 .menu__link{
     color: #CDCDCD;
 }
+.not-only{
+    padding-top: 47px;
+}
+.not-only__text{
+    padding-top: 128px;
+    flex: 1 0 28%;
+    width: 33%;
+    padding-bottom: 243px;
+}
+.not-only__title{
+    font-size: 44px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+.not-only__description{
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+    margin: 0;
+    letter-spacing: 0.02px;
+}
+.not-only__btn{
+    margin-top: 42px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background: #F1CDB3;
+    border-radius: 100px;
+    padding: 15px 45px;
+    border: none;
+}
+.not-only__img{
+    flex: 1 1 50%;
+    background: url(../images/start-screen-puppy.png) no-repeat;
+    background-position: 34px 0px;
+    padding-bottom: 60.7%;
+}
