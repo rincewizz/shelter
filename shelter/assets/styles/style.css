@@ -26,26 +26,33 @@ h1,h2,h3,h4,h5,h6{
 .start-screen{
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
-
 .header{
+    padding: 32px 0 14px;
+}
+.header--main{
     padding: 60px 0 0;
 }
 .logo__title{
     font-size: 32px;
     line-height: 110%;
-    color: #F1CDB3;
+    color: #545454;
     margin: 0;
     letter-spacing: 0.06em;
+}
+.logo__title--main{
+    color: #F1CDB3;
 }
 .logo__subtitle{
     font-size: 13px;
     line-height: 15px;
-    color: #FFFFFF;
+    color: #292929;
     letter-spacing: 0.1em;
     margin-top: 10px;
     text-align: center;
 }
-
+.logo__subtitle--main{
+    color: #FFFFFF;
+}
 
 .menu__items{
     display: flex;
@@ -57,9 +64,16 @@ h1,h2,h3,h4,h5,h6{
 .menu__item{
     margin-left: 36px;
 }
+.menu__item--active{
+    border-bottom: 3px solid #F1CDB3;
+}
 .menu__link{
+    color: #545454;
+}
+.menu__link--main{
     color: #CDCDCD;
 }
+
 .not-only{
     padding-top: 47px;
 }
@@ -335,6 +349,55 @@ h1,h2,h3,h4,h5,h6{
     color: #B2B2B2;
     margin: 20px 0 0;
 }
+.pets{
+    background: #F6F6F6;
+    padding: 82px 0 100px;
+}
+.pets__title{
+    font-family: 'Georgia';
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0;
+}
+
+.pets__list{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-top: 58px;
+    grid-gap: 30px;
+}
+
+.pets__paginations{
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.pets__page{
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    background: none;
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+.pets__page--current{
+    background: #F1CDB3;
+}
+.pets__page--inactive{
+    border: 2px solid #CDCDCD;
+    color: #CDCDCD;
+}
+
 .flex--footer{
     gap:3.3%
 }
