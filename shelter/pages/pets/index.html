@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/styles/normalize.css">
   <link rel="stylesheet" href="../../assets/styles/style.css">
-  <title>Document</title>
+  <title>Our pets</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
       <div class="flex flex--js-space-between">
 
         <div class="logo">
-          <a href="#" class="logo__link">
+          <a href="/shelter/index.html" class="logo__link">
             <h1 class="logo__title">Cozy House</h1>              
           </a>
           <p class="logo__subtitle">Shelter for pets in Boston</p>
@@ -26,11 +26,11 @@
             <li class="menu__item">
               <a href="/shelter/index.html" class="menu__link">About the shelter</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item  menu__item--active">
               <a href="pages/pets/index.html" class="menu__link">Our pets</a>
             </li>
             <li class="menu__item">
-              <a href="#help" class="menu__link">Help the shelter</a>
+              <a href="/shelter/index.html#help" class="menu__link">Help the shelter</a>
             </li>
             <li class="menu__item">
               <a href="#contacts" class="menu__link">Contacts</a>
@@ -105,8 +105,8 @@
           </div>
 
       <div class="pets__paginations">
-        <button class="pets__page pets__page--inactive"><<</button>
-        <button class="pets__page pets__page--inactive"><</button>
+        <button disabled class="pets__page pets__page--inactive"><<</button>
+        <button disabled class="pets__page pets__page--inactive"><</button>
         <button class="pets__page pets__page--current">1</button>
         <button class="pets__page">></button>
         <button class="pets__page">>></button>
@@ -116,22 +116,19 @@
 
   </section>
 
-
-
-
   <footer class="footer" id="contacts">
     <div class="container">
       <div class="flex flex--footer">
         <div class="footer__contacts">
           <h2 class="footer__contacts-title">For questions <br>and suggestions</h2>
-          <div class="footer__contacts-item footer__contacts-item--mail">email@shelter.com</div>
-          <div class="footer__contacts-item footer__contacts-item--phone">+13 674 567 75 54</div>
+          <div class="footer__contacts-item footer__contacts-item--mail"><a class="footer__contacts-link" href="mailto:email@shelter.com">email@shelter.com</a></div>
+          <div class="footer__contacts-item footer__contacts-item--phone"><a class="footer__contacts-link" href="tel:136745677554">+13 674 567 75 54</a></div>
         </div>
 
         <div class="footer__adress">
           <h2 class="footer__adress-title">We are waiting <br>for your visit</h2>
-          <div class="footer__adress-item">1 Central Street, Boston (entrance from the store)</div>
-          <div class="footer__adress-item">18 South Park, London </div>
+          <div class="footer__adress-item"><a class="footer__adress-link" target="__blank" href="https://goo.gl/maps/gWTpH3hFzkRgxBP1A">1 Central Street, Boston (entrance from the store)</a></div>
+          <div class="footer__adress-item"><a class="footer__adress-link" target="__blank" href="https://goo.gl/maps/xG4EvwYj8L195f1WA">18 South Park, London</a></div>
         </div>
         <div class="footer__img"></div>
       </div>

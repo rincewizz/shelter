@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/styles/normalize.css">
   <link rel="stylesheet" href="assets/styles/style.css">
-  <title>Document</title>
+  <title>Cozy House</title>
 </head>
 <body>
   <section class="start-screen">
@@ -47,7 +47,7 @@
           <div class="not-only__text">
             <h2 class="not-only__title">Not only people <br>need a house</h2>
             <p class="not-only__description">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-            <button class="not-only__btn">Make a friend</button>
+            <a href="#our-friends" class="not-only__btn">Make a friend</a>
           </div>
 
           <div class="not-only__img">
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <section class="our-friends">
+  <section class="our-friends" id="our-friends">
     <div class="container">
       <h2 class="our-friends__title">Our friends who <br>are looking for a house</h2>
      
@@ -106,12 +106,14 @@
             
           </div>
           <div class="carousel__controls">
-            <div class="carousel__arrow carousel__arrow--left"><img src="assets/icons/arrow.svg" alt=""></div>
-            <div class="carousel__arrow carousel__arrow--right"><img src="assets/icons/arrow.svg" alt=""></div>
+            <button class="carousel__arrow carousel__arrow--left"><img src="assets/icons/arrow.svg" alt=""></button>
+            <button class="carousel__arrow carousel__arrow--right"><img src="assets/icons/arrow.svg" alt=""></button>
           </div>
         </div> 
 
-        <button class="our-friends__more-pets">Get to know the rest</button>
+        <div class="wrap--center">
+          <a href="pages/pets/index.html" class="our-friends__more-pets">Get to know the rest</a>
+        </div>
 
     </div>
   </section>
@@ -170,7 +172,7 @@
           <h2 class="donation__title">You can also<br> make a donation</h2>
           <p class="donation__bank">Name of the bank / Type of bank account</p>
           <div class="donation__credit">
-            <div class="donation__credit-number">8380 2880 8028 8791 7435</div>
+            <a href="#" class="donation__credit-number">8380 2880 8028 8791 7435</a>
           </div>
           <p class="donation__legal-info">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
         </div>
@@ -183,14 +185,14 @@
       <div class="flex flex--footer">
         <div class="footer__contacts">
           <h2 class="footer__contacts-title">For questions <br>and suggestions</h2>
-          <div class="footer__contacts-item footer__contacts-item--mail">email@shelter.com</div>
-          <div class="footer__contacts-item footer__contacts-item--phone">+13 674 567 75 54</div>
+          <div class="footer__contacts-item footer__contacts-item--mail"><a class="footer__contacts-link" href="mailto:email@shelter.com">email@shelter.com</a></div>
+          <div class="footer__contacts-item footer__contacts-item--phone"><a class="footer__contacts-link" href="tel:136745677554">+13 674 567 75 54</a></div>
         </div>
 
         <div class="footer__adress">
           <h2 class="footer__adress-title">We are waiting <br>for your visit</h2>
-          <div class="footer__adress-item">1 Central Street, Boston (entrance from the store)</div>
-          <div class="footer__adress-item">18 South Park, London </div>
+          <div class="footer__adress-item"><a class="footer__adress-link" target="__blank" href="https://goo.gl/maps/gWTpH3hFzkRgxBP1A">1 Central Street, Boston (entrance from the store)</a></div>
+          <div class="footer__adress-item"><a class="footer__adress-link" target="__blank" href="https://goo.gl/maps/xG4EvwYj8L195f1WA">18 South Park, London</a></div>
         </div>
         <div class="footer__img"></div>
       </div>
