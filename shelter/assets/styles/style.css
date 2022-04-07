@@ -392,6 +392,10 @@ button{
     border-radius: 9px;
     margin-top: 20px;
     align-content: center;
+    transition: 0.3s;
+}
+.donation__credit:hover{
+    color: #292929;
 }
 .donation__credit:before{
     content: '';
@@ -401,12 +405,8 @@ button{
     height: auto;
     margin-right: 15px;
 }
-.donation__credit-number{
-    color: #545454;
-}
-.donation__credit-number:hover{
-    color: #292929;
-}
+
+
 .donation__legal-info{
     font-family: 'Arial';
     font-style: italic;
