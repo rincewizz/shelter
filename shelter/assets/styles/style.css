@@ -409,6 +409,18 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+  .hide--md {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide--sm {
+    display: none;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1314,22 +1326,38 @@ button {
   background: #F6F6F6;
   padding: 81px 0 100px;
 }
+@media (max-width: 992px) {
+  .pets {
+    padding: 81px 0 77px;
+  }
+}
 .pets__title {
   text-align: center;
   margin: 0;
 }
 .pets__list {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   justify-content: space-between;
   margin-top: 58px;
-  grid-gap: 30px;
+  grid-row-gap: 30px;
+  grid-column-gap: 3%;
+}
+@media (max-width: 992px) {
+  .pets__list {
+    margin: 28px auto 0;
+  }
 }
 .pets__paginations {
   margin-top: 60px;
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+@media (max-width: 992px) {
+  .pets__paginations {
+    margin-top: 39px;
+  }
 }
 .pets__page {
   font-family: "Georgia";
@@ -1359,6 +1387,14 @@ button {
   color: #CDCDCD;
   cursor: not-allowed;
   background: none;
+}
+
+@media (max-width: 992px) {
+  .wrap--pets {
+    max-width: 604px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .wrap--center {

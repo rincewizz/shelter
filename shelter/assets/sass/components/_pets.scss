@@ -2,6 +2,10 @@
     background: #F6F6F6;
     padding: 81px 0 100px;
 
+    @include media-md {    
+        padding: 81px 0 77px;
+    }
+
     &__title{
         @extend %font-title-dark;
         text-align: center;
@@ -10,10 +14,15 @@
     
     &__list{
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         justify-content: space-between;
         margin-top: 58px;
-        grid-gap: 30px;
+        grid-row-gap: 30px;
+        grid-column-gap: 3%;
+
+        @include media-md {    
+            margin: 28px auto 0;
+        }
     }
     
     &__paginations{
@@ -21,6 +30,10 @@
         display: flex;
         gap: 20px;
         justify-content: center;
+
+        @include media-md {    
+            margin-top: 39px;
+        }
     }
     &__page{
         @include font($size:20px, $family:'Georgia');
@@ -53,6 +66,13 @@
             background: none;
         }
     }
-
     
+}
+
+.wrap--pets{
+    @include media-md {    
+        max-width: 604px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
