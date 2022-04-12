@@ -10,6 +10,10 @@
     &__carousel{
         margin-top: 58px;
         position: relative;
+
+        @include media-md {    
+            margin-top: 59px;
+        }
     }
 
     &__more-pets{

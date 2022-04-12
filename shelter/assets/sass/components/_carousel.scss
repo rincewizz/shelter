@@ -5,9 +5,18 @@
         align-items: stretch;
         width: 90%;
         margin: 0 auto;
+        overflow: hidden;
+
+        @include media-md {    
+            width: 87.5%;
+        } 
     }
     &__item{
         flex: 0 0 33.333%;
+
+        @include media-md {    
+            flex: 0 0 50%;
+        } 
     }
     &__arrow{
         position: absolute;

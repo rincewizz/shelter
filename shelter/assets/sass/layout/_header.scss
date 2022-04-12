@@ -8,5 +8,9 @@
         background: none;
         position: static;
         padding: 60px 0 0;
+
+        @include media-md {    
+            padding: 30px 0 0;
+        }
     }
 }

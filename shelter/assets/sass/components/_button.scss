@@ -15,8 +15,6 @@
     }
 
     &--light{
-
-        color: $color-button-text;
         border: 2px solid $color-primary;
         box-sizing: border-box;
         border-radius: 100px;
@@ -27,6 +25,10 @@
         &:hover{
             border: 2px solid $color-primary-hover;
             background: $color-primary-hover;
+        }
+
+        @include media-md {    
+            padding: 13px 43px;
         }
     }
 }

@@ -13,6 +13,11 @@
     }
     &__item{
         padding: 54px 5% 0;
+
+        @include media-md {    
+            padding: 54px 0 0;
+            flex: 1 0 33.333%;
+        }
     }
     &__item-ico{
         text-align: center;
@@ -30,5 +35,13 @@
         letter-spacing: 0.06em;
         color: #545454;
         margin-top: 30px;
+    }
+}
+
+
+.wrap--help{
+    @include media-md {    
+        max-width: 690px;
+        margin: 0 auto;
     }
 }
