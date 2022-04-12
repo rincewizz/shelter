@@ -10,13 +10,29 @@
         @include media-md {    
             width: 87.5%;
         } 
+        @include media-sm {    
+            width: 90%;
+            margin-bottom: 45px;
+        }
     }
     &__item{
         flex: 0 0 33.333%;
 
         @include media-md {    
             flex: 0 0 50%;
-        } 
+        }
+        @include media-sm {    
+            flex: 0 0 100%;
+        }
+    }
+
+    &__controls{
+        @include media-sm {    
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 61%;
+        }
     }
     &__arrow{
         position: absolute;
@@ -33,6 +49,10 @@
         background: none;
         padding: 0;
         transition: 0.3s;
+
+        @include media-sm {    
+            position: static;
+        }
 
         &:hover{
             background: #FDDCC4;

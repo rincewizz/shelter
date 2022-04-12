@@ -1,4 +1,9 @@
 .menu{
+
+    @include media-sm {    
+        display: none;
+    }
+
     &__items{
         display: flex;
         list-style: none;

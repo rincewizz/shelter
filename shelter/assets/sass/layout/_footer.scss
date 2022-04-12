@@ -17,16 +17,34 @@
             padding: 0;
             margin-bottom: 64px;
         }
+        @include media-sm {    
+            flex: 0 1 auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
     }
 
     &__contacts-title, &__adress-title{
         @extend %font-title-light;
+
+        br{
+            @include media-sm {    
+                display: none;
+            }
+        }
+
     }
     &__contacts-title{
         margin: 0 0 40px;
     }
     &__adress-title{
         margin: 0 0 32px;
+
+        @include media-sm {    
+            margin: 0 0 40px;
+            padding: 0 10px;
+        }
+
     }
     &__contacts-item{
         font-family: 'Georgia';
@@ -40,6 +58,10 @@
 
         &:last-child{
             margin-bottom: 0;
+        }
+
+        @include media-sm {    
+            justify-content: center;
         }
     }
     &__contacts-item:before{
@@ -73,6 +95,11 @@
         &:last-child{
             margin-bottom: 0;
         }
+
+        @include media-sm {    
+            margin: 0 0 38px;
+            text-align: left;
+        }
     }
     &__adress-item:before{
         content: '';
@@ -103,6 +130,9 @@
             flex: 1 0 100%;
             background-position: center;
             padding: 0px 0 48.5%;
+        }
+        @include media-sm {    
+            padding: 0px 0 89.7%;
         }
     }   
 }

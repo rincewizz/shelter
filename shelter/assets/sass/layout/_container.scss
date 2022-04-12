@@ -11,4 +11,9 @@
     @include media-md {    
         max-width: 708px;
     }
+
+    @include media-sm {    
+        max-width: 300px;
+        padding: 0;
+    }
 }
