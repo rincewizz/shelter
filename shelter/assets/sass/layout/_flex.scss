@@ -1,0 +1,14 @@
+.flex{
+    display: flex;
+
+    &--js-space-between{
+        justify-content: space-between;
+    }
+    &--ai-center{
+        align-items: center;
+    }
+
+    &--footer{
+        gap: 9.5%;
+    }
+}

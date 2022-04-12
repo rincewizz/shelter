@@ -1,0 +1,20 @@
+
+%font-title-dark{
+    @include font($size:35px, $family:'Georgia', $weight:400, $style:normal); 
+    color: $color-title-dark;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+%font-title-light{
+    @include font($size:35px, $family:'Georgia', $weight:400, $style:normal); 
+    color: $color-title-light;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+%font-title-light-big{
+    @include font($size:44px, $family:'Georgia', $weight:400, $style:normal); 
+    color: $color-title-light;
+    line-height: 130%;
+}

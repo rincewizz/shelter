@@ -1,0 +1,31 @@
+.not-only{
+    padding-top: 60px;
+
+    &__text{
+        padding-top: 128px;
+        flex: 1 0 28%;
+        width: 33%;
+        padding-bottom: 243px;
+    }
+    &__title{
+        @extend %font-title-light-big;
+        margin-bottom: 40px;
+    }
+    &__description{
+        font-size: 15px;
+        line-height: 160%;
+        color: #CDCDCD;
+        margin: 0;
+        letter-spacing: 0.02px;
+    }
+    &__btn{
+        margin-top: 42px;
+    }
+
+    &__img{
+        flex: 1 1 50%;
+        background: url(../images/start-screen-puppy.png) no-repeat;
+        background-position: 34px 0px;
+        padding-bottom: 60.7%;
+    }
+}

@@ -1,0 +1,32 @@
+.button{    
+    display: inline-block;
+    @include font($size:17px, $family:'Georgia', $weight:400, $style:normal);
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-button-text;
+    background: $color-primary;
+    border-radius: 100px;
+    padding: 15px 45px;
+    border: none;
+    transition: 0.3s;
+
+    &:hover{
+        background: $color-primary-hover;
+    }
+
+    &--light{
+
+        color: $color-button-text;
+        border: 2px solid $color-primary;
+        box-sizing: border-box;
+        border-radius: 100px;
+        display: block;
+        padding: 13px 42px;
+        background: none;
+
+        &:hover{
+            border: 2px solid $color-primary-hover;
+            background: $color-primary-hover;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.logo{
+
+    &__title{
+        font-size: 32px;
+        line-height: 1.2;
+        color: #545454;
+        margin: 0 0 7px;
+        letter-spacing: 0.06em;
+
+        &--main{
+            color: #F1CDB3;
+        }
+    }
+
+    &__subtitle{
+        font-size: 13px;
+        line-height: 15px;
+        color: #292929;
+        letter-spacing: 0.1em;
+        margin: 0;
+        text-align: center;
+
+        &--main{
+            color: #FFFFFF;
+        }
+    }
+
+}
+

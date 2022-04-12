@@ -1,0 +1,42 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+
+
+@import "./vendors/_normalize";
+
+@import "./base/fonts";
+@import "./base/typography";
+@import "./base/base";
+
+@import "./layout/container";
+@import "./layout/flex";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./components/button";
+@import "./components/start-screen";
+@import "./components/logo";
+@import "./components/menu";
+@import "./components/not-only";
+@import "./components/about";
+@import "./components/our-friends";
+@import "./components/carousel";
+@import "./components/pet-card";
+@import "./components/help";
+@import "./components/donation";
+@import "./components/pets";
+
+
+.wrap--center{
+    text-align: center;
+}
+
+.wrap--about{
+    padding: 0px 14.6%;
+}
+
+.container--donation{
+    max-width: 915px;
+    margin: 0 24.89%;
+}

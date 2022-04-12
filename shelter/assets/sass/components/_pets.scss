@@ -1,0 +1,58 @@
+.pets{
+    background: #F6F6F6;
+    padding: 81px 0 100px;
+
+    &__title{
+        @extend %font-title-dark;
+        text-align: center;
+        margin: 0;
+    }
+    
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
+        margin-top: 58px;
+        grid-gap: 30px;
+    }
+    
+    &__paginations{
+        margin-top: 60px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    &__page{
+        @include font($size:20px, $family:'Georgia');
+        border: 2px solid #F1CDB3;
+        box-sizing: border-box;
+        border-radius: 100px;
+        width: 52px;
+        height: 52px;
+        background: none;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #292929;
+        transition: 0.3s;
+
+        &:hover{
+            background: #FDDCC4;
+            border: 2px solid #FDDCC4;
+        }
+        &--current{
+            background: #F1CDB3;
+        }
+        &--inactive, 
+        &:disabled
+        &:disabled:hover,
+        &--inactive:hover
+        {
+            border: 2px solid #CDCDCD;
+            color: #CDCDCD;
+            cursor: not-allowed;
+            background: none;
+        }
+    }
+
+    
+}

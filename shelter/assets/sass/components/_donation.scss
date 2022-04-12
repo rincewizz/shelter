@@ -1,0 +1,58 @@
+.donation{
+    background: #F6F6F6;
+    padding: 81px 0 100px;
+
+    &__img{
+        flex: 0 0 58.5%;
+        background: url(../images/donation-dog.png) no-repeat;
+        background-position: center left;
+        padding-bottom: 28.55%;
+    }
+    &__text{
+        flex: 0 1 auto;
+    }
+    &__title{
+        margin: 0 0 20px;
+        @extend %font-title-dark;
+    }
+    &__bank{
+        @include font($size:15px, $family:'Georgia');
+        line-height: 1;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin: 0 0 20px;
+    }
+    &__credit{
+        display: inline-flex;
+        @include font($size:20px, $family:'Georgia');
+        line-height: 1.2;
+        letter-spacing: 0.06em;
+        color: #545454;
+        padding: 10px 15px;
+        background: #F1CDB3;
+        border-radius: 9px;
+        margin: 0 0 20px;
+        align-content: center;
+        transition: 0.3s;
+
+        &:hover{
+            color: #292929;
+        }
+        &:before{
+            content: "";
+            background: url(../icons/credit-card.svg) no-repeat;
+            display: block;
+            width: 30px;
+            height: 23px;
+            margin-right: 15px;
+        }
+    }
+
+    &__legal-info{
+        @include font($size:12px, $family:'Arial', $style:italic);
+        line-height: 18px;
+        color: #B2B2B2;
+        margin: 0;
+    }
+
+}

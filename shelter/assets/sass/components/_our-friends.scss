@@ -1,0 +1,21 @@
+.our-friends{
+    background: #F6F6F6;
+    padding: 81px 0 100px;
+
+    &__title{
+        @extend %font-title-dark;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__carousel{
+        margin-top: 58px;
+        position: relative;
+    }
+
+    &__more-pets{
+        margin: 60px auto 0;
+    }
+
+}
+
+

@@ -1,0 +1,55 @@
+.carousel{
+
+    &__items{
+        display: flex;
+        align-items: stretch;
+        width: 90%;
+        margin: 0 auto;
+    }
+    &__item{
+        flex: 0 0 33.333%;
+    }
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        width: 52px;
+        height: 52px;
+        border: 2px solid #F1CDB3;
+        box-sizing: border-box;
+        border-radius: 100px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        padding: 0;
+        transition: 0.3s;
+
+        &:hover{
+            background: #FDDCC4;
+            border: 2px solid #FDDCC4;
+        }
+        &:disabled{
+            border: 2px solid #CDCDCD;
+            color: #CDCDCD;
+        }
+
+        &--left{
+            left:0;
+        }
+        &--right{
+            right: 0;
+        }
+                
+        & img{
+            width: 14px;
+            height: auto;
+        }            
+
+        &--right img{
+            transform: rotate(180deg);
+        }
+    }
+
+    
+}

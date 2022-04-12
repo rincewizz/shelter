@@ -1,0 +1,37 @@
+.menu{
+    &__items{
+        display: flex;
+        list-style: none;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #CDCDCD;
+        padding: 0;
+        margin: 0;
+    }
+    &__item{
+        margin-left: 36px;
+
+        &--active{
+            border-bottom: 3px solid #F1CDB3;
+        }
+    }
+
+    &__link{
+        color: #545454;
+        transition: color 0.3s;
+
+        &:hover{
+            color: #292929;
+        }
+        
+        &--main{
+            color: #CDCDCD;
+        }
+    }
+
+    .menu__item--active .menu__link--main, 
+    .menu__link--main:hover{
+        color: $menu-color-light-hover;
+    }
+}
+
