@@ -463,6 +463,7 @@ button{
 }
 .pets__page--current, .pets__page--current:hover{
     background: #F1CDB3;
+    border: 2px solid #F1CDB3;
     cursor: default;
 }
 
