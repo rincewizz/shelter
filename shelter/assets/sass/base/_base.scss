@@ -1,0 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+
+.hide--md{
+    @include media-md {    
+        display: none;
+    }
+}
+
+.hide--sm{
+    @include media-sm {    
+        display: none;
+    }
+}

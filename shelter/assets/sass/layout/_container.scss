@@ -1,0 +1,19 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    // box-sizing: border-box;
+    padding: 0 20px;
+      
+    @include media-lg {    
+        max-width: 992px;
+    }
+
+    @include media-md {    
+        max-width: 708px;
+    }
+
+    @include media-sm {    
+        max-width: 300px;
+        padding: 0;
+    }
+}

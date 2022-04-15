@@ -1,0 +1,152 @@
+.footer{
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+    padding: 38px 0 0;
+
+    @include media-md {    
+        padding: 31px 0 0;
+    }
+
+    &__contacts, &__adress, &__img{
+        flex: 0 1 33.33%;
+        padding: 19px 0 57px;
+    }
+
+    &__contacts, &__adress{
+        @include media-md {    
+            flex: 0 1 47%;
+            padding: 0;
+            margin-bottom: 64px;
+        }
+        @include media-sm {    
+            flex: 0 1 auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__contacts-title, &__adress-title{
+        @extend %font-title-light;
+
+        br{
+            @include media-sm {    
+                display: none;
+            }
+        }
+
+    }
+    &__contacts-title{
+        margin: 0 0 40px;
+    }
+    &__adress-title{
+        margin: 0 0 32px;
+
+        @include media-sm {    
+            margin: 0 0 40px;
+            padding: 0 10px;
+        }
+
+    }
+    &__contacts-item{
+        font-family: 'Georgia';
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #F1CDB3;
+        margin-bottom: 43px;
+        display: flex;
+        align-items: center;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        @include media-sm {    
+            justify-content: center;
+        }
+    }
+    &__contacts-item:before{
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 32px;
+        margin-right: 20px;
+        vertical-align: middle;
+        background-position: center;
+    }
+    &__contacts-item--mail:before{
+        background: url(../icons/icon-email.svg) no-repeat;
+        height: 27px;
+        width: 40px;
+        background-position: center;
+    }
+    &__contacts-item--phone:before{
+        background: url(../icons/icon-phone.svg) no-repeat;
+    }
+    
+    &__adress-item{
+        font-family: 'Georgia';
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #F1CDB3;
+        margin-bottom: 31px;
+        display: flex;
+        align-items: center; 
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        @include media-sm {    
+            margin: 0 0 38px;
+            text-align: left;
+        }
+    }
+    &__adress-item:before{
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 32px;
+        margin-right: 20px;
+        background-position: center;
+        background: url(../icons/pin.svg) no-repeat;
+        flex: 0 0 22px;
+    }
+    &__contacts-link, 
+    &__adress-link{
+        color: inherit;
+        display: inline-block;
+    }
+    &__img{
+        background: url(../images/footer-puppy.png) no-repeat;
+        background-position: right bottom;
+        padding: 0px 0 25.95%;
+        background-size: contain;
+
+        @include media-lg {    
+            max-width: 992px;
+        }
+
+        @include media-md {    
+            flex: 1 0 100%;
+            background-position: center;
+            padding: 0px 0 48.5%;
+        }
+        @include media-sm {    
+            padding: 0px 0 89.7%;
+        }
+    }   
+}
+
+.wrap--footer{
+    gap: 9.5%;
+
+    @include media-lg {    
+        gap:0;
+    }
+    @include media-md {    
+        flex-wrap: wrap;
+        max-width: 640px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}

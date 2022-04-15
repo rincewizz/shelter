@@ -1,0 +1,17 @@
+@mixin font($size, $family:null, $weight:400, $style:normal){
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+
+@mixin media-lg {
+    @media (max-width: $device-width-lg) { @content; }
+}
+@mixin media-md {
+    @media (max-width: $device-width-md) { @content; }
+}
+@mixin media-sm {
+    @media (max-width: $device-width-sm) { @content; }
+}

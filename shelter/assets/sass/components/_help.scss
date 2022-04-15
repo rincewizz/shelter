@@ -1,0 +1,75 @@
+.help{
+    padding: 81px 0 100px;
+
+    @include media-sm {    
+        padding: 41px 0;
+    }
+
+    &__title{
+        @extend %font-title-dark;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__list{
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 4px;
+
+        @include media-sm {    
+            padding-top: 12px;
+        }
+    }
+    &__item{
+        padding: 54px 5% 0;
+
+        @include media-md {    
+            padding: 54px 0 0;
+            flex: 1 0 33.333%;
+        }
+        @include media-sm {    
+            flex: 0 0 47%;
+            padding-top: 28px;
+        }
+    }
+    &__item-ico{
+        text-align: center;
+
+        & img{
+            display: block;
+            margin: 0 auto;
+
+            @include media-sm {    
+                display: block;
+                width: 100%;
+                height: auto;
+                max-height: 50px;
+            }
+        }
+    }
+
+    &__item-category{
+        @include font($size:20px, $family:'Georgia');
+        line-height: 115%; 
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-top: 30px;
+
+        @include media-sm {    
+            font-size: 15px;
+            margin-top: 22px;
+        }
+    }
+}
+
+
+.wrap--help{
+    @include media-md {    
+        max-width: 690px;
+        margin: 0 auto;
+    }
+    @include media-sm {    
+        gap: 6%;
+        justify-content: space-between;
+    }
+}

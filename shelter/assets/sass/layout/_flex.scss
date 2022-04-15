@@ -1,0 +1,12 @@
+.flex{
+    display: flex;
+
+    &--js-space-between{
+        justify-content: space-between;
+    }
+    &--ai-center{
+        align-items: center;
+    }
+    
+
+}

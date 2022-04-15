@@ -1,0 +1,87 @@
+.not-only{
+    padding-top: 60px;
+
+    @include media-md {    
+        padding-top: 61px;
+    }
+    @include media-sm {    
+        padding-top: 60px;
+    }
+
+    &__text{
+        padding-top: 128px;
+        flex: 1 0 28%;
+        width: 33%;
+        padding-bottom: 243px;
+
+        @include media-lg {    
+            padding: 0 0 100px;
+        }
+        @include media-md {    
+            width: 100%;
+            max-width: 460px;
+        }
+        @include media-sm {    
+            padding: 0 0 107px;
+        }
+    }
+    &__title{
+        @extend %font-title-light-big;
+        margin-bottom: 40px;
+
+        @include media-md {    
+            margin-top: 0;
+        }
+        @include media-sm {    
+            text-align: center;
+            letter-spacing: 0.06em;
+        }
+    }
+    &__description{
+        font-size: 15px;
+        line-height: 160%;
+        color: #CDCDCD;
+        margin: 0;
+        letter-spacing: 0.02px;
+
+        @include media-sm {    
+            text-align: center;
+        }
+    }
+    &__btn{
+        margin-top: 42px;
+
+        @include media-md {    
+            text-align: center;
+        }
+    }
+
+    &__img{
+        flex: 1 1 50%;
+        background: url(../images/start-screen-puppy.png) no-repeat;
+        background-position: 34px 0px;
+        padding-bottom: 60.7%;
+
+        @include media-lg {    
+            background-position: center bottom;
+            background-size: contain;
+            padding-bottom: 48.7%;
+        }
+        @include media-md {    
+            background-position: right bottom;
+            padding-bottom: 83.8%;
+            width: 100%;
+        }
+        @include media-sm {    
+            padding-bottom: 90.3%;
+        }
+    }
+}
+
+.wrap--not-only{
+
+    @include media-md {    
+        flex-direction: column;
+        align-items: center;
+    }
+}
