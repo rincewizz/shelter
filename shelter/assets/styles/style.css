@@ -1396,8 +1396,10 @@ button {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
-.pets__page--current {
+.pets__page--current, .pets__page--current:hover {
   background: #F1CDB3;
+  border: 2px solid #F1CDB3;
+  cursor: default;
 }
 .pets__page--inactive, .pets__page:disabled .pets__page:disabled:hover, .pets__page--inactive:hover {
   border: 2px solid #CDCDCD;
