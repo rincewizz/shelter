@@ -726,7 +726,7 @@ button {
   display: block;
   width: 100%;
   height: 2px;
-  background: #F1CDB3;
+  background: #000;
 }
 
 .burger {
@@ -747,6 +747,9 @@ button {
 }
 .burger::before {
   content: "";
+}
+.burger--main .burger__line, .burger--main::after, .burger--main::before {
+  background: #F1CDB3;
 }
 
 .not-only {
