@@ -1,7 +1,7 @@
 .logo{
 
     &__title{
-        font-size: 32px;
+        @include font($size:32px, $family:'Georgia', $weight:400, $style:normal);
         line-height: 1.2;
         color: #545454;
         margin: 0 0 7px;
@@ -23,6 +23,16 @@
         &--main{
             color: #FFFFFF;
         }
+    }
+
+    &--mobile-menu{
+        display: none;
+        max-width: 188px;
+        @include media-sm {    
+            display: block;
+            margin-bottom: 40px;
+        }
+
     }
 
 }
