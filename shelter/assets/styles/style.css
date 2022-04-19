@@ -442,6 +442,12 @@ button {
     padding: 0;
   }
 }
+@media (max-width: 767px) {
+  .container--header {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
 
 .flex {
   display: flex;
@@ -735,7 +741,7 @@ button {
   flex-direction: column;
   height: 22px;
   justify-content: space-between;
-  margin-right: 14.5%;
+  margin-right: 43px;
 }
 @media (max-width: 767px) {
   .burger {
