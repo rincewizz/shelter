@@ -469,6 +469,7 @@ button {
   position: sticky;
   top: 0;
   background: #fff;
+  z-index: 10;
 }
 .header--main {
   background: none;
@@ -1447,6 +1448,8 @@ button {
   margin-top: 58px;
   grid-row-gap: 30px;
   grid-column-gap: 3%;
+  opacity: 1;
+  transition: 0.5s;
 }
 @media (max-width: 992px) {
   .pets__list {
@@ -1457,6 +1460,9 @@ button {
   .pets__list {
     margin: 40px auto 0;
   }
+}
+.pets__list--hiding {
+  opacity: 0;
 }
 .pets__paginations {
   margin-top: 60px;

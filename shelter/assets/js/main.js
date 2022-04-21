@@ -233,6 +233,154 @@ class Carousel{
 
 }
 
+class Pagination{
+    constructor(selector, itemsObj){
+        this.pets = itemsObj;
+        this.root = document.querySelector(selector);
+        this.list = this.root.querySelector(".pets__list");
+        this.firstPageBtn = this.root.querySelector(".pagination__first");
+        this.prevPageBtn = this.root.querySelector(".pagination__prev");
+        this.currentPageBtn = this.root.querySelector(".pagination__current");
+        this.nextPageBtn = this.root.querySelector(".pagination__next");
+        this.lastPageBtn = this.root.querySelector(".pagination__last");
+        this.currentPage=1;
+        this.pageCount=Math.ceil(48/this.getCardsPerPage());
+        this.pages=[];
+
+        this.firstPageBtn.addEventListener("click", ()=>{ this.getFirstPage() });
+        this.prevPageBtn.addEventListener("click", ()=>{ this.getPrevPage() });
+        this.nextPageBtn.addEventListener("click", ()=>{ this.getNextPage() });
+        this.lastPageBtn.addEventListener("click", ()=>{ this.getLastPage() });
+
+        this.generatePages();
+        this.renderPage(this.currentPage);
+    }
+    generatePages(){
+        
+        this.pages=[];
+        let randomCardsId=this.getRandomCardsId();
+        for(let i=0; i<this.pageCount; i++){
+            this.pages[i]=[];
+            while(this.pages[i].length<this.getCardsPerPage()){
+                let tmp = [];
+                if(randomCardsId.length==0){
+                    randomCardsId=this.getRandomCardsId();
+                }
+                if(this.pages[i].length!==0){
+                    tmp = randomCardsId.filter( el => { return this.pages[i].includes(el) } )
+                    randomCardsId = randomCardsId.filter( el => { return !this.pages[i].includes(el) } )
+                }
+                this.pages[i].push( ...randomCardsId.splice(0, this.getCardsPerPage() - this.pages[i].length ) );
+                if(tmp.length!==0){
+                    randomCardsId.unshift(...tmp);
+                }
+                
+            }            
+        }
+
+    }
+    renderPage(pageNumber){
+
+        this._promiseAnimation(this.list, "pets__list--hiding").then( ()=> {
+            Array.from(this.list.children).forEach( el => el.remove());
+            for(let i =0; i<this.pages[pageNumber-1].length; i++){
+                let index = this.pages[pageNumber-1][i];
+                this.list.insertAdjacentHTML("beforeend", this.getCard(this.pets[index]));            
+            }
+            this.list.classList.remove("pets__list--hiding");
+        })
+
+        
+    }
+    getRandomCardsId(){        
+        let randomCardsId=[];
+        while (randomCardsId.length !== this.pets.length) {
+            let index = Math.floor(Math.random() * this.pets.length);
+            if (randomCardsId.indexOf(index) === -1) {
+                randomCardsId.push(index);
+            }
+        }
+        return randomCardsId;
+    }
+
+    getCard(card){
+        return `
+        <div class="pets__item">
+        <div class="our-friends__card pet-card">
+          <div class="pet-card__img"><img width="270" height="270" src="../../${card.img}" alt=""></div>
+          <div class="pet-card__name">${card.name}</div>
+          <button class="button button--light pet-card__more">Learn more</button>
+        </div>
+        </div>
+        `
+    }
+    getCardsPerPage(){
+        if(document.documentElement.clientWidth>991){
+            return 8;
+        }else if(document.documentElement.clientWidth>766){
+            return 6;
+        }            
+        return 3;  
+    }
+    _btnDisable(btn){
+        btn.disabled=true;
+        btn.classList.add("pets__page--inactive");
+    }
+    _btnEnable(btn){
+        btn.disabled=false;
+        btn.classList.remove("pets__page--inactive");
+    }
+    setCurrentPage(pageNumber){
+        if(pageNumber<1 || pageNumber>this.pageCount){
+            return false;
+        }
+        if(pageNumber===1){
+            this._btnDisable(this.firstPageBtn);
+            this._btnDisable(this.prevPageBtn);
+        }
+        if(pageNumber===this.pageCount){
+            this._btnDisable(this.lastPageBtn);
+            this._btnDisable(this.nextPageBtn);
+        }
+        if(this.currentPage===1 && pageNumber>this.currentPage){
+            this._btnEnable(this.firstPageBtn);
+            this._btnEnable(this.prevPageBtn);
+        }
+        if(this.currentPage===this.pageCount && pageNumber<this.currentPage){
+            this._btnEnable(this.lastPageBtn);
+            this._btnEnable(this.nextPageBtn);
+        }
+
+        this.currentPage=pageNumber;
+        this.currentPageBtn.innerText=this.currentPage; 
+        return this.currentPage;
+    }
+
+    getFirstPage(){
+        
+        this.renderPage( this.setCurrentPage(1) );
+    }
+    getPrevPage(){
+        this.renderPage( this.setCurrentPage(this.currentPage-1) );
+    }
+    getNextPage(){
+        this.renderPage( this.setCurrentPage(this.currentPage+1) );
+    }
+    getLastPage(){
+        this.renderPage( this.setCurrentPage(this.pageCount) );
+    }
+
+    _promiseAnimation(elem, className){
+        return new Promise(resolve => {
+            elem.classList.add(className);
+            elem.addEventListener("transitionend", resolve);
+        });
+    } 
+
+}
+
+let pagination = new Pagination(".pets", pets);
+
 function changeMobileMenu(){
 
     const burger = document.querySelector(".burger");
