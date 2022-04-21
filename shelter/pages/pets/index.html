@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/styles/style.css">
+  <script defer src="../../assets/js/main.js"></script>
   <title>Our pets</title>
 </head>
 <body>
@@ -21,6 +22,13 @@
         </div>
 
         <nav class="menu">
+
+          <div class="logo logo--mobile-menu">
+            <a href="##" class="logo__link">
+              <div class="logo__title logo__title--main">Cozy House</div>
+              <p class="logo__subtitle logo__subtitle--main">Shelter for pets in Boston</p>
+            </a>
+          </div>
           <ul class="menu__items">
             <li class="menu__item">
               <a href="../../index.html" class="menu__link">About the shelter</a>
@@ -43,6 +51,7 @@
 
       </div>
     </div>
+    <div class="header__overflow"></div>
   </header>
 
   <section class="pets">
@@ -108,12 +117,12 @@
             </div>
           </div>
 
-      <div class="pets__paginations">
-        <button disabled class="pets__page pets__page--inactive"><<</button>
-        <button disabled class="pets__page pets__page--inactive"><</button>
-        <button class="pets__page pets__page--current">1</button>
-        <button class="pets__page">></button>
-        <button class="pets__page">>></button>
+      <div class="pets__paginations pagination">
+        <button disabled class="pets__page pets__page--inactive pagination__first"><<</button>
+        <button disabled class="pets__page pets__page--inactive pagination__prev"><</button>
+        <button class="pets__page pets__page--current pagination__current">1</button>
+        <button class="pets__page pagination__next">></button>
+        <button class="pets__page pagination__last">>></button>
       </div>
 
     </div>

@@ -23,11 +23,20 @@
         grid-row-gap: 30px;
         grid-column-gap: 3%;
 
+        opacity: 1;
+        transition: 0.5s;
+
         @include media-md {    
             margin: 28px auto 0;
         }
         @include media-sm {    
             margin: 40px auto 0;
+        }
+
+
+
+        &--hiding {
+            opacity: 0;
         }
     }
     

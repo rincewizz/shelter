@@ -12,6 +12,8 @@
     height: 22px;
     justify-content: space-between;
     margin-right: 43px;
+    z-index: 100;
+    transition: transform 0.5s;
 
     @include media-sm {    
         display: flex;   
@@ -32,10 +34,14 @@
         
     }
 
-    &--main{
+    &--main, &--open{
         .burger__line, &::after, &::before{
             background: $color-primary;
         }        
+    }
+
+    &--open{
+        transform: rotate(90deg);
     }
 
 }

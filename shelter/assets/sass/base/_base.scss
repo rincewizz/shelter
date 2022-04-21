@@ -1,6 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+.body--noscroll{
+    overflow: hidden;
+}
 
 a{
     text-decoration: none;
