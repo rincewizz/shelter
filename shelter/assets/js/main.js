@@ -379,7 +379,6 @@ class Pagination{
 
 }
 
-let pagination = new Pagination(".pets", pets);
 
 function changeMobileMenu(){
 
@@ -419,6 +418,9 @@ function init(){
 
     if( document.querySelector(".carousel") ){
         let carousel = new Carousel(".carousel", pets);
+    }
+    if( document.querySelector(".pets") ){
+        let pagination = new Pagination(".pets", pets);
     }
     
 }
