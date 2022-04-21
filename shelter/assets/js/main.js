@@ -380,7 +380,6 @@ class Pagination{
 }
 
 
-
 function changeMobileMenu(){
 
     const burger = document.querySelector(".burger");
