@@ -1,8 +1,6 @@
 .carousel{
 
-    &__items{
-        display: flex;
-        align-items: stretch;
+    &__inner{
         width: 90%;
         margin: 0 auto;
         overflow: hidden;
@@ -15,8 +13,20 @@
             margin-bottom: 45px;
         }
     }
+    &__items{
+        display: flex;
+        align-items: stretch;
+        transform: translateX(-100%); 
+
+        &--sliding{
+            transition: 0.5s;
+
+        }
+
+    }
     &__item{
         flex: 0 0 33.333%;
+        transition: 0.5s;
 
         @include media-md {    
             flex: 0 0 50%;

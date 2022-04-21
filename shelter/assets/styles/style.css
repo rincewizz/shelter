@@ -1066,26 +1066,33 @@ button {
   }
 }
 
-.carousel__items {
-  display: flex;
-  align-items: stretch;
+.carousel__inner {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 @media (max-width: 992px) {
-  .carousel__items {
+  .carousel__inner {
     width: 87.5%;
   }
 }
 @media (max-width: 767px) {
-  .carousel__items {
+  .carousel__inner {
     width: 90%;
     margin-bottom: 45px;
   }
 }
+.carousel__items {
+  display: flex;
+  align-items: stretch;
+  transform: translateX(-100%);
+}
+.carousel__items--sliding {
+  transition: 0.5s;
+}
 .carousel__item {
   flex: 0 0 33.333%;
+  transition: 0.5s;
 }
 @media (max-width: 992px) {
   .carousel__item {
