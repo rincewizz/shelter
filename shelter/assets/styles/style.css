@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pets__title, .donation__title, .help__title, .our-friends__title, .about__title {
   font-family: "Georgia";
   font-style: normal;
@@ -27,8 +28,18 @@
   line-height: 130%;
 }
 
+.modal__title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  color: #000000;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
 @media (max-width: 767px) {
-  .pets__title, .donation__title, .help__title, .our-friends__title, .about__title, .footer__contacts-title, .footer__adress-title, .not-only__title {
+  .pets__title, .donation__title, .help__title, .our-friends__title, .about__title, .footer__contacts-title, .footer__adress-title, .not-only__title, .modal__title {
     font-family: "Georgia";
     font-style: normal;
     font-weight: 400;
@@ -1519,6 +1530,172 @@ button {
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(41, 41, 41, 0.6);
+  height: 100%;
+  width: 100%;
+}
+.modal__overlay:hover .modal__close, .modal__overlay:hover .modal__close:hover {
+  background-color: #F1CDB3;
+}
+.modal__window {
+  width: 90%;
+  max-width: 900px;
+  background: #FAFAFA;
+  border-radius: 9px;
+  position: fixed;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal__window:hover .modal__close {
+  background: initial;
+}
+@media (max-width: 992px) {
+  .modal__window {
+    max-width: 630px;
+  }
+}
+@media (max-width: 767px) {
+  .modal__window {
+    width: 75%;
+  }
+}
+.modal__close {
+  position: absolute;
+  border: 2px solid #F1CDB3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  right: -43px;
+  top: -53px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .modal__close {
+    right: -30px;
+  }
+}
+.modal__close-icon {
+  background: url(../icons/close.svg) no-repeat center;
+  width: 12px;
+  height: 12px;
+  padding: 18px;
+}
+.modal__info {
+  display: flex;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .modal__info {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .modal__info {
+    flex-direction: column;
+  }
+}
+.modal__img {
+  flex: 0 0 55.5%;
+}
+.modal__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 9px;
+}
+@media (max-width: 767px) {
+  .modal__img {
+    display: none;
+  }
+}
+.modal__text {
+  padding: 51px 20px 0px 31px;
+}
+@media (max-width: 992px) {
+  .modal__text {
+    padding: 10px 10px 0px 10px;
+  }
+}
+.modal__title {
+  margin: 0px 0 12px;
+}
+@media (max-width: 767px) {
+  .modal__title {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+.modal__type {
+  font-size: 20px;
+  margin: 0px 0 45px;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 992px) {
+  .modal__type {
+    margin: 0px 0 28px;
+  }
+}
+@media (max-width: 767px) {
+  .modal__type {
+    text-align: center;
+  }
+}
+.modal__desc {
+  margin: 0 0 42px;
+}
+@media (max-width: 992px) {
+  .modal__desc {
+    line-height: 105%;
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .modal__desc {
+    text-align: justify;
+    margin: 0 0 24px;
+  }
+}
+.modal__features {
+  list-style: none;
+  padding: 0;
+}
+.modal__futures-item {
+  margin: 0 0 10px;
+  letter-spacing: 0.12em;
+  line-height: 110%;
+}
+@media (max-width: 992px) {
+  .modal__futures-item {
+    margin: 0 0 5px;
+    letter-spacing: 0.21em;
+  }
+}
+.modal__futures-item::before {
+  color: #F1CDB3;
+  content: "·";
+  padding: 0 4px 0 0px;
+  font-size: 30px;
+  line-height: 15px;
+  vertical-align: sub;
+}
+@media (max-width: 992px) {
+  .modal__futures-item::before {
+    padding: 0 6px 0 0px;
   }
 }
 

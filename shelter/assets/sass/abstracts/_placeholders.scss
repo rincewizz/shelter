@@ -26,10 +26,18 @@
     @extend %font-title-small;
 }
 
+%font-title-modal{
+    @include font($size:35px, $family:'Georgia', $weight:400, $style:normal); 
+    color: #000000;
+    line-height: 130%;
+    letter-spacing: 0.06em;
 
+    @extend %font-title-small;
+}
 
 %font-title-small{
     @include media-sm {    
         @include font($size:25px, $family:'Georgia', $weight:400, $style:normal);         
     } 
 }
+
