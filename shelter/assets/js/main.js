@@ -273,25 +273,23 @@ class Pagination{
                 this.pages[i].push( ...randomCardsId.splice(0, this.getCardsPerPage() - this.pages[i].length ) );
                 if(tmp.length!==0){
                     randomCardsId.unshift(...tmp);
-                }
-                
-            }            
+                }                
+            }
         }
 
     }
-    renderPage(pageNumber){
-
-        this._promiseAnimation(this.list, "pets__list--hiding").then( ()=> {
+    renderPage(pageNumber){        
+        this._promiseAnimation(this.list, "pets__list--hiding").then( ()=> {            
             Array.from(this.list.children).forEach( el => el.remove());
             for(let i =0; i<this.pages[pageNumber-1].length; i++){
                 let index = this.pages[pageNumber-1][i];
                 this.list.insertAdjacentHTML("beforeend", this.getCard(this.pets[index], index));            
             }
             this.list.classList.remove("pets__list--hiding");
-        })
+        });
 
-        
     }
+
     getRandomCardsId(){        
         let randomCardsId=[];
         while (randomCardsId.length !== this.pets.length) {
@@ -356,8 +354,7 @@ class Pagination{
         return this.currentPage;
     }
 
-    getFirstPage(){
-        
+    getFirstPage(){   
         this.renderPage( this.setCurrentPage(1) );
     }
     getPrevPage(){
@@ -370,10 +367,19 @@ class Pagination{
         this.renderPage( this.setCurrentPage(this.pageCount) );
     }
 
-    _promiseAnimation(elem, className){
+    _promiseAnimation(elem, className){        
         return new Promise(resolve => {
+            if(this.list.children.length>0){
+                const promiseAnimationCb = () => {                
+                    elem.removeEventListener('transitionend', promiseAnimationCb);
+                    resolve();
+                }            
+                elem.addEventListener("transitionend", promiseAnimationCb);
+            }else{
+                resolve();
+            }
+
             elem.classList.add(className);
-            elem.addEventListener("transitionend", resolve);
         });
     } 
 
@@ -410,7 +416,6 @@ function initModal(path=""){
     `;
     document.body.insertAdjacentHTML("beforeend", modalTemplate);
     let modal = document.querySelector(".modal");
-    
 
     function openModal(petId){
         let pet = pets[petId];
