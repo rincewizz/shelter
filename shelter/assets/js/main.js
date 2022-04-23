@@ -158,10 +158,10 @@ class Carousel{
         }            
         return 1;                
     }
-    getCard(card){
+    getCard(card, id=0){
         return `
         <div class="carousel__item">
-        <div class="our-friends__card pet-card">
+        <div class="our-friends__card pet-card" data-id=${id}>
           <div class="pet-card__img"><img width="270" height="270" src="${card.img}" alt=""></div>
           <div class="pet-card__name">${card.name}</div>
           <button class="button button--light pet-card__more">Learn more</button>
@@ -219,15 +219,15 @@ class Carousel{
 
         for(let i=0; i<this.count; i++){
             let card = pets[this.nextItemsId[i]];
-            this.items.insertAdjacentHTML("afterbegin", this.getCard(card));
-            this.items.insertAdjacentHTML("beforeend", this.getCard(card));
+            this.items.insertAdjacentHTML("afterbegin", this.getCard(card, this.nextItemsId[i]));
+            this.items.insertAdjacentHTML("beforeend", this.getCard(card, this.nextItemsId[i]));
         }
     }
     addCurrentItems(){
         this._generateCurrentItems();
         for(let i=0; i<this.count; i++){
             let card = pets[this.currentItemsId[i]];
-            this.items.insertAdjacentHTML("beforeend", this.getCard(card));
+            this.items.insertAdjacentHTML("beforeend", this.getCard(card, this.currentItemsId[i]));
         }
     }
 
@@ -285,7 +285,7 @@ class Pagination{
             Array.from(this.list.children).forEach( el => el.remove());
             for(let i =0; i<this.pages[pageNumber-1].length; i++){
                 let index = this.pages[pageNumber-1][i];
-                this.list.insertAdjacentHTML("beforeend", this.getCard(this.pets[index]));            
+                this.list.insertAdjacentHTML("beforeend", this.getCard(this.pets[index], index));            
             }
             this.list.classList.remove("pets__list--hiding");
         })
@@ -303,10 +303,10 @@ class Pagination{
         return randomCardsId;
     }
 
-    getCard(card){
+    getCard(card, id=0){
         return `
         <div class="pets__item">
-        <div class="our-friends__card pet-card">
+        <div class="our-friends__card pet-card" data-id=${id}>
           <div class="pet-card__img"><img width="270" height="270" src="../../${card.img}" alt=""></div>
           <div class="pet-card__name">${card.name}</div>
           <button class="button button--light pet-card__more">Learn more</button>
@@ -380,6 +380,68 @@ class Pagination{
 }
 
 
+function initModal(path=""){
+    let modalTemplate = `
+    <div class="modal">
+    <div class="modal__overlay">
+      <div class="modal__window">
+        <div class="modal__close">
+          <div class="modal__close-icon"></div>
+        </div>
+        <div class="modal__info">
+          <div class="modal__img">
+            <img src="" alt="">
+          </div>
+          <div class="modal__text">
+            <h3 class="modal__title"></h3>
+            <p class="modal__type"></p>
+            <p class="modal__desc"></p>
+            <ul class="modal__features">
+              <li class="modal__futures-item"><b>Age:</b> <span class="modal__age"></span></li>
+              <li class="modal__futures-item"><b>Inoculations:</b> <span class="modal__inoculations"></span></li>
+              <li class="modal__futures-item"><b>Diseases:</b> <span class="modal__diseases"></span></li>
+              <li class="modal__futures-item"><b>Parasites:</b> <span class="modal__parasites"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
+    document.body.insertAdjacentHTML("beforeend", modalTemplate);
+    let modal = document.querySelector(".modal");
+    
+
+    function openModal(petId){
+        let pet = pets[petId];
+        modal.querySelector(".modal__img img").src=path+pet.img;
+        modal.querySelector(".modal__title").innerText=pet.name;
+        modal.querySelector(".modal__type").innerText=pet.type+" - "+pet.breed;
+        modal.querySelector(".modal__desc").innerText=pet.description;
+        modal.querySelector(".modal__age").innerText=pet.age;
+        modal.querySelector(".modal__inoculations").innerText=pet.inoculations.join(", ");
+        modal.querySelector(".modal__diseases").innerText=pet.diseases.join(", ");
+        modal.querySelector(".modal__parasites").innerText=pet.parasites.join(", ");
+
+        modal.classList.add("modal--open");
+        document.body.classList.add("body--noscroll");
+    }
+    function closeModal(){
+        modal.classList.remove("modal--open");
+        document.body.classList.remove("body--noscroll");        
+    }
+    document.body.addEventListener("click", e => {
+        let petCard = e.target.closest(".pet-card");
+        if(petCard){
+            let petId = petCard.dataset.id;
+            openModal(petId);
+        }
+    });
+    modal.addEventListener("click", e => {
+        if(e.target.classList.contains("modal__overlay") || e.target.closest(".modal__close")){
+            closeModal();
+        }
+    });
+}
 
 function changeMobileMenu(){
 
@@ -423,6 +485,11 @@ function init(){
     if( document.querySelector(".pets") ){
         let pagination = new Pagination(".pets", pets);
     }
+    path="";
+    if( document.body.classList.contains("body--pets") ){
+        path="../../";
+    }
+    initModal(path);
     
 }
 
