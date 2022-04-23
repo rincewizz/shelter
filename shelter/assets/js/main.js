@@ -380,6 +380,7 @@ class Pagination{
 }
 
 
+
 function initModal(path=""){
     let modalTemplate = `
     <div class="modal">
@@ -442,6 +443,7 @@ function initModal(path=""){
         }
     });
 }
+
 
 function changeMobileMenu(){
 
