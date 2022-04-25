@@ -151,9 +151,9 @@ class Carousel{
         this.render();
     }
     getCount(){
-        if(document.documentElement.clientWidth>991){
+        if(document.documentElement.clientWidth>1279){
             return 3;
-        }else if(document.documentElement.clientWidth>766){
+        }else if(document.documentElement.clientWidth>767){
             return 2;
         }            
         return 1;                
@@ -313,9 +313,9 @@ class Pagination{
         `
     }
     getCardsPerPage(){
-        if(document.documentElement.clientWidth>991){
+        if(document.documentElement.clientWidth>1279){
             return 8;
-        }else if(document.documentElement.clientWidth>766){
+        }else if(document.documentElement.clientWidth>767){
             return 6;
         }            
         return 3;  
