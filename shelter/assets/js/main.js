@@ -477,7 +477,7 @@ function initMobileMenu(){
     );
 
     menuItems.addEventListener("click", e => {
-        if(e.target.classList.contains("menu__link"))
+        if(e.target.classList.contains("menu__link") && burger.classList.contains("burger--open"))
             changeMobileMenu();
     }) 
 
