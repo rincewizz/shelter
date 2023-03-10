@@ -1,0 +1,47 @@
+%burger-line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.burger{
+    width: 30px;
+    display: none;
+    flex-direction: column;
+    height: 22px;
+    justify-content: space-between;
+    margin-right: 43px;
+    z-index: 100;
+    transition: transform 0.5s;
+
+    @include media-sm {    
+        display: flex;   
+    }
+
+    &__line{
+        @extend %burger-line;
+
+    }
+    &::after{
+        content: "";
+        @extend %burger-line;
+
+    }
+    &::before{
+        content: "";
+        @extend %burger-line;
+        
+    }
+
+    &--main, &--open{
+        .burger__line, &::after, &::before{
+            background: $color-primary;
+        }        
+    }
+
+    &--open{
+        transform: rotate(90deg);
+    }
+
+}

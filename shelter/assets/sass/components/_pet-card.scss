@@ -1,0 +1,36 @@
+.pet-card{
+    background: #FAFAFA;
+    border-radius: 9px;
+    width: 270px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover{
+        background: #FFFFFF;
+        cursor: pointer;
+    }
+    &__img{
+        text-align: center;
+    }
+    &__img img{
+        display: block;
+    }
+    &__name{
+        @include font($size:20px, $family:'Georgia');
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-top: 30px;
+    }
+    &__more{
+        margin: 31px auto 0;
+    }
+    &:hover &__more{
+        border: 2px solid $color-primary-hover;
+        background: $color-primary-hover;
+    }
+
+}

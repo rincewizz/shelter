@@ -1,0 +1,25 @@
+html{
+    scroll-behavior: smooth;
+}
+.body--noscroll{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+
+.hide--md{
+    @include media-md {    
+        display: none;
+    }
+}
+
+.hide--sm{
+    @include media-sm {    
+        display: none;
+    }
+}

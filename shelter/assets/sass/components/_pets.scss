@@ -1,0 +1,100 @@
+.pets{
+    background: #F6F6F6;
+    padding: 81px 0 100px;
+
+    @include media-md {    
+        padding: 81px 0 77px;
+    }
+    @include media-sm {    
+        padding: 42px 0;
+    }
+
+    &__title{
+        @extend %font-title-dark;
+        text-align: center;
+        margin: 0;
+    }
+    
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        justify-content: space-between;
+        margin-top: 58px;
+        grid-row-gap: 30px;
+        grid-column-gap: 3%;
+
+        opacity: 1;
+        transition: 0.5s;
+
+        @include media-md {    
+            margin: 28px auto 0;
+        }
+        @include media-sm {    
+            margin: 40px auto 0;
+        }
+
+
+
+        &--hiding {
+            opacity: 0;
+        }
+    }
+    
+    &__paginations{
+        margin-top: 60px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        @include media-md {    
+            margin-top: 39px;
+        }
+        @include media-sm {
+            gap:0;
+            justify-content: space-between;
+            margin-top: 42px;
+        }
+    }
+    &__page{
+        @include font($size:20px, $family:'Georgia');
+        border: 2px solid #F1CDB3;
+        box-sizing: border-box;
+        border-radius: 100px;
+        width: 52px;
+        height: 52px;
+        background: none;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: #292929;
+        transition: 0.3s;
+
+        &:hover{
+            background: #FDDCC4;
+            border: 2px solid #FDDCC4;
+        }
+        &--current, &--current:hover{
+            background: #F1CDB3;
+            border: 2px solid #F1CDB3;
+            cursor: default;
+        }
+        &--inactive, 
+        &:disabled
+        &:disabled:hover,
+        &--inactive:hover
+        {
+            border: 2px solid #CDCDCD;
+            color: #CDCDCD;
+            cursor: not-allowed;
+            background: none;
+        }
+    }
+    
+}
+
+.wrap--pets{
+    @include media-md {    
+        max-width: 604px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

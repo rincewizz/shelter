@@ -1,0 +1,41 @@
+.our-friends{
+    background: #F6F6F6;
+    padding: 81px 0 100px;
+
+    @include media-md {    
+        padding: 81px 0 100px;
+    }
+    @include media-sm {    
+        padding: 43px 0;
+    }
+
+
+    &__title{
+        @extend %font-title-dark;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__carousel{
+        margin-top: 58px;
+        position: relative;
+
+        @include media-md {    
+            margin-top: 59px;
+        }
+        @include media-sm {    
+            margin-top: 42px;
+        }
+        
+    }
+
+    &__more-pets{
+        margin: 60px auto 0;
+
+        @include media-sm {    
+            margin: 17px auto 0;
+        }
+    }
+
+}
+
+
